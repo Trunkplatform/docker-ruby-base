@@ -4,7 +4,7 @@ COPY nginx_signing.key /tmp/nginx_signing.key
 
 RUN cat /tmp/nginx_signing.key | apt-key add - && \
     echo "deb http://nginx.org/packages/ubuntu/ trusty nginx" >> /etc/apt/sources.list.d/nginx.list && \
-    apt-get update && apt-get install -y nginx && \
+    apt-get update && apt-get install --no-install-recommends -y nginx && \
     rm -rf /var/lib/apt/lists/* && \
     \
     ln -sf /dev/stdout /var/log/nginx/access.log && \

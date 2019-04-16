@@ -1,4 +1,4 @@
-FROM quay.io/trunk/ruby:2.2.1
+FROM quay.io/trunk/ruby:2.3
 
 ENV S6_VERSION v1.17.1.1
 
